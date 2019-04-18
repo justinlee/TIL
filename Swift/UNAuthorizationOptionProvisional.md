@@ -14,7 +14,6 @@ if (@available(iOS 12.0, *)) {
         
 [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:authOptions
                                                                     completionHandler:^(BOOL granted, NSError * _Nullable error) {
-                                                                    
                                                                     }];
 
 UNAuthorizationOptionProvisional 의 경우엔 iOS 12에서 추가된 기능으로 앱이 처음 실행될때 푸시 동의 얼럿을 띄우지 않고 임시 푸시를 보낼수 있음.
