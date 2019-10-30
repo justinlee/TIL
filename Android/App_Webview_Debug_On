@@ -1,0 +1,18 @@
+APK 크롬 디버깅 활성화.
+
+1. App을 스토어에서 타켓 apk 다운
+
+2. decompile
+
+3. 다음 smali 코드를 앱 실행후 처음 실행되는 액티비티의 onCreate쪽에 추가해 준다.
+
+const/4 v2, 0x1
+invoke-static {v2}, Landroid/webkit/WebView;->setWebContentsDebuggingEnabled(Z)V
+
+4. repack을 해서 apk로 다시 만든다.
+
+5. 사이닝을 다시 해준다.
+
+6. chrome 디버거를 켜서 디버깅을 시작한다.
+
+참고 : https://blog.speedfox.co.uk/articles/1524219174-android_webview_hackery/
